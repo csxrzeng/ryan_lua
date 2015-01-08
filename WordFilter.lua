@@ -171,5 +171,8 @@ function WordFilter.replace(word, rep, isTest)
 		  index = index + 1
 		end
 	end
-	return isTest and false or word -- 根据是否测试返回相应的值
+	if isTest then -- 根据是否测试返回相应的值
+		return false
+	end
+	return word
 end
